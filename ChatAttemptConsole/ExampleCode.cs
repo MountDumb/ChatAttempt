@@ -32,6 +32,7 @@ namespace TCPSocketServer
         ///Main Method
         public static void Main(string[] args)
         {
+            //I might not even use this example.....
             //creat n display windows form
             Server tcpSockServer = new Server();
             Application.Run(tcpSockServer);
