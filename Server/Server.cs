@@ -24,7 +24,8 @@ namespace Server
         internal Server()
         {
             _port = 12537;
-            _localAddress = IPAddress.Parse("127.0.0.1");                      
+            _localAddress = IPAddress.Parse("127.0.0.1");
+            _formatter = new BinaryFormatter();
         }
 
         internal void Run()
@@ -39,7 +40,6 @@ namespace Server
                 Console.WriteLine("Server is running...");
 
                 TcpClient client = _server.AcceptTcpClient();
-                _formatter = new BinaryFormatter();
                 NetworkStream stream = client.GetStream();
                 
                 //The stream is set up and it's typecasted to StringPackage, so we can examine it's contents and print the user's name to the console.
