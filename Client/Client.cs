@@ -45,6 +45,8 @@ namespace Client
                 {
                     package.Content = Console.ReadLine();
                     _formatter.Serialize(stream, package);
+                    StringPackage sp = (StringPackage)_formatter.Deserialize(stream);
+                    Console.WriteLine($"{sp.User.Name}: {sp.Content}");
                 }
             }
         }
