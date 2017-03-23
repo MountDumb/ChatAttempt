@@ -4,12 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChatAttemptConsole
+namespace Server
 {
     class Program
     {
         static void Main(string[] args)
         {
+            Console.Title = "Server";
+            Server server = new Server();
+            server.Run();
         }
     }
 }
