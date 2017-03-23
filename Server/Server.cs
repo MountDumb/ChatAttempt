@@ -54,7 +54,7 @@ namespace Server
                     _formatter.Serialize(stream, package);
                 }
             }
-            catch (InvalidOperationException)
+            catch (System.IO.IOException)
             {
                 Console.WriteLine($"{package.User.Name} has disconnected");
             }
